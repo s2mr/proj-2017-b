@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		35F9D9039740E55AEFE8DCED /* Pods_proj_2017_bTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EF6512C3E94A011182500EF /* Pods_proj_2017_bTests.framework */; };
 		6EC5B7101FD7B7010096B0A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC5B70F1FD7B7010096B0A6 /* AppDelegate.swift */; };
-		6EC5B7121FD7B7010096B0A6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC5B7111FD7B7010096B0A6 /* ViewController.swift */; };
+		6EC5B7121FD7B7010096B0A6 /* ReaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC5B7111FD7B7010096B0A6 /* ReaderViewController.swift */; };
 		6EC5B7151FD7B7010096B0A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EC5B7131FD7B7010096B0A6 /* Main.storyboard */; };
 		6EC5B7171FD7B7010096B0A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6EC5B7161FD7B7010096B0A6 /* Assets.xcassets */; };
 		6EC5B71A1FD7B7010096B0A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EC5B7181FD7B7010096B0A6 /* LaunchScreen.storyboard */; };
@@ -42,7 +42,7 @@
 		4D4A7E727E370F9F4558A36A /* Pods-proj-2017-b.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-proj-2017-b.debug.xcconfig"; path = "Pods/Target Support Files/Pods-proj-2017-b/Pods-proj-2017-b.debug.xcconfig"; sourceTree = "<group>"; };
 		6EC5B70C1FD7B7010096B0A6 /* proj-2017-b.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "proj-2017-b.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EC5B70F1FD7B7010096B0A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6EC5B7111FD7B7010096B0A6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6EC5B7111FD7B7010096B0A6 /* ReaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaderViewController.swift; sourceTree = "<group>"; };
 		6EC5B7141FD7B7010096B0A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6EC5B7161FD7B7010096B0A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6EC5B7191FD7B7010096B0A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -125,7 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				6EC5B70F1FD7B7010096B0A6 /* AppDelegate.swift */,
-				6EC5B7111FD7B7010096B0A6 /* ViewController.swift */,
+				6EC5B7111FD7B7010096B0A6 /* ReaderViewController.swift */,
 				6EC5B7131FD7B7010096B0A6 /* Main.storyboard */,
 				6EC5B7161FD7B7010096B0A6 /* Assets.xcassets */,
 				6EC5B7181FD7B7010096B0A6 /* LaunchScreen.storyboard */,
@@ -342,10 +342,16 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-proj-2017-b/Pods-proj-2017-b-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/QRCodeReader.swift/QRCodeReader.framework",
+				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Unbox/Unbox.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/QRCodeReader.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Unbox.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -458,7 +464,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6EC5B7121FD7B7010096B0A6 /* ViewController.swift in Sources */,
+				6EC5B7121FD7B7010096B0A6 /* ReaderViewController.swift in Sources */,
 				6EC5B7101FD7B7010096B0A6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

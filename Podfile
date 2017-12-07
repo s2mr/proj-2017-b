@@ -7,7 +7,10 @@ target 'proj-2017-b' do
 
   # Pods for proj-2017-b
   pod 'QRCodeReader.swift'
-
+  pod 'R.swift'
+  pod 'RxSwift'
+  pod 'Unbox'
+  
   target 'proj-2017-bTests' do
     inherit! :search_paths
     # Pods for testing

@@ -1,12 +1,24 @@
 PODS:
   - QRCodeReader.swift (8.0.4)
+  - R.swift (4.0.0):
+    - R.swift.Library (~> 4.0.0)
+  - R.swift.Library (4.0.0)
+  - RxSwift (4.0.0)
+  - Unbox (2.5.0)
 
 DEPENDENCIES:
   - QRCodeReader.swift
+  - R.swift
+  - RxSwift
+  - Unbox
 
 SPEC CHECKSUMS:
   QRCodeReader.swift: 9730cfa7ed5f0dd839765df8cf18d41db20e4081
+  R.swift: d6a5ec2f55a8441dc0ed9f1f8b37d7d11ae85c66
+  R.swift.Library: c3af34921024333546e23b70e70d0b4e0cffca75
+  RxSwift: fd680d75283beb5e2559486f3c0ff852f0d35334
+  Unbox: 30e437e6151a6de16139375fd4e8dd9a664cfbf7
 
-PODFILE CHECKSUM: 64d2dab1edd9d8f4a8eec0879d01845327e4b45c
+PODFILE CHECKSUM: f2123e3aee461109ee31133043d7503b57caa475
 
 COCOAPODS: 1.3.1
