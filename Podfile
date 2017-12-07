@@ -10,7 +10,8 @@ target 'proj-2017-b' do
   pod 'R.swift'
   pod 'RxSwift'
   pod 'Unbox'
-  
+  pod 'Alamofire'
+    
   target 'proj-2017-bTests' do
     inherit! :search_paths
     # Pods for testing

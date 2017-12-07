@@ -1,4 +1,5 @@
 PODS:
+  - Alamofire (4.6.0)
   - QRCodeReader.swift (8.0.4)
   - R.swift (4.0.0):
     - R.swift.Library (~> 4.0.0)
@@ -7,18 +8,20 @@ PODS:
   - Unbox (2.5.0)
 
 DEPENDENCIES:
+  - Alamofire
   - QRCodeReader.swift
   - R.swift
   - RxSwift
   - Unbox
 
 SPEC CHECKSUMS:
+  Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
   QRCodeReader.swift: 9730cfa7ed5f0dd839765df8cf18d41db20e4081
   R.swift: d6a5ec2f55a8441dc0ed9f1f8b37d7d11ae85c66
   R.swift.Library: c3af34921024333546e23b70e70d0b4e0cffca75
   RxSwift: fd680d75283beb5e2559486f3c0ff852f0d35334
   Unbox: 30e437e6151a6de16139375fd4e8dd9a664cfbf7
 
-PODFILE CHECKSUM: f2123e3aee461109ee31133043d7503b57caa475
+PODFILE CHECKSUM: b67e9522480a11f22190edbcdd4ab0e6eedbef90
 
 COCOAPODS: 1.3.1

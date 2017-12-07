@@ -14,6 +14,11 @@
 		6E2054831FD99B42009216E0 /* ShowDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E2054821FD99B42009216E0 /* ShowDataViewController.swift */; };
 		6E2054851FD99B4D009216E0 /* ShowDataViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E2054841FD99B4D009216E0 /* ShowDataViewController.storyboard */; };
 		6E2054881FD99D52009216E0 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E2054871FD99D52009216E0 /* R.generated.swift */; };
+		6E20548A1FD99FD9009216E0 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E2054891FD99FD9009216E0 /* API.swift */; };
+		6E20548C1FD99FE5009216E0 /* KagayaAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E20548B1FD99FE5009216E0 /* KagayaAPI.swift */; };
+		6E20548F1FD9A250009216E0 /* QRDataSendRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E20548E1FD9A250009216E0 /* QRDataSendRequest.swift */; };
+		6E2054921FD9A414009216E0 /* QRDataEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E2054911FD9A414009216E0 /* QRDataEntity.swift */; };
+		6E2054941FD9A529009216E0 /* QRDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E2054931FD9A529009216E0 /* QRDataRepository.swift */; };
 		6EC5B7101FD7B7010096B0A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC5B70F1FD7B7010096B0A6 /* AppDelegate.swift */; };
 		6EC5B7121FD7B7010096B0A6 /* ReaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC5B7111FD7B7010096B0A6 /* ReaderViewController.swift */; };
 		6EC5B7151FD7B7010096B0A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EC5B7131FD7B7010096B0A6 /* Main.storyboard */; };
@@ -52,6 +57,11 @@
 		6E2054821FD99B42009216E0 /* ShowDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDataViewController.swift; sourceTree = "<group>"; };
 		6E2054841FD99B4D009216E0 /* ShowDataViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ShowDataViewController.storyboard; sourceTree = "<group>"; };
 		6E2054871FD99D52009216E0 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		6E2054891FD99FD9009216E0 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		6E20548B1FD99FE5009216E0 /* KagayaAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KagayaAPI.swift; sourceTree = "<group>"; };
+		6E20548E1FD9A250009216E0 /* QRDataSendRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRDataSendRequest.swift; sourceTree = "<group>"; };
+		6E2054911FD9A414009216E0 /* QRDataEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRDataEntity.swift; sourceTree = "<group>"; };
+		6E2054931FD9A529009216E0 /* QRDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRDataRepository.swift; sourceTree = "<group>"; };
 		6EC5B70C1FD7B7010096B0A6 /* proj-2017-b.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "proj-2017-b.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EC5B70F1FD7B7010096B0A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6EC5B7111FD7B7010096B0A6 /* ReaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaderViewController.swift; sourceTree = "<group>"; };
@@ -132,8 +142,11 @@
 		6E2054741FD99538009216E0 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				6E20548D1FD9A049009216E0 /* Request */,
 				6E2054761FD99545009216E0 /* Datastore */,
 				6E2054751FD99540009216E0 /* Repository */,
+				6E2054891FD99FD9009216E0 /* API.swift */,
+				6E20548B1FD99FE5009216E0 /* KagayaAPI.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -141,6 +154,7 @@
 		6E2054751FD99540009216E0 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				6E2054931FD9A529009216E0 /* QRDataRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -179,6 +193,22 @@
 			path = ShowData;
 			sourceTree = "<group>";
 		};
+		6E20548D1FD9A049009216E0 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				6E20548E1FD9A250009216E0 /* QRDataSendRequest.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		6E2054901FD9A3DA009216E0 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				6E2054911FD9A414009216E0 /* QRDataEntity.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
 		6EC5B7031FD7B7010096B0A6 = {
 			isa = PBXGroup;
 			children = (
@@ -205,6 +235,7 @@
 		6EC5B70E1FD7B7010096B0A6 /* proj-2017-b */ = {
 			isa = PBXGroup;
 			children = (
+				6E2054901FD9A3DA009216E0 /* Entity */,
 				6E2054741FD99538009216E0 /* Data */,
 				6E2054721FD99514009216E0 /* Presentation */,
 				6EC5B70F1FD7B7010096B0A6 /* AppDelegate.swift */,
@@ -425,6 +456,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-proj-2017-b/Pods-proj-2017-b-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/QRCodeReader.swift/QRCodeReader.framework",
 				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
@@ -432,6 +464,7 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/QRCodeReader.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
@@ -563,10 +596,15 @@
 			files = (
 				6E20547B1FD99AD4009216E0 /* TopViewController.swift in Sources */,
 				6E2054881FD99D52009216E0 /* R.generated.swift in Sources */,
+				6E2054941FD9A529009216E0 /* QRDataRepository.swift in Sources */,
+				6E20548F1FD9A250009216E0 /* QRDataSendRequest.swift in Sources */,
 				6E2054831FD99B42009216E0 /* ShowDataViewController.swift in Sources */,
+				6E20548C1FD99FE5009216E0 /* KagayaAPI.swift in Sources */,
 				6EC5B7121FD7B7010096B0A6 /* ReaderViewController.swift in Sources */,
 				6E2054811FD99B38009216E0 /* ShowDataPresenter.swift in Sources */,
+				6E2054921FD9A414009216E0 /* QRDataEntity.swift in Sources */,
 				6EC5B7101FD7B7010096B0A6 /* AppDelegate.swift in Sources */,
+				6E20548A1FD99FD9009216E0 /* API.swift in Sources */,
 				6E20547E1FD99AF2009216E0 /* ReaderPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
