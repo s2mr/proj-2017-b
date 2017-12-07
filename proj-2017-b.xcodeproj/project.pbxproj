@@ -99,6 +99,45 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		6E2054721FD99514009216E0 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				6E2054731FD9951F009216E0 /* ViewController */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		6E2054731FD9951F009216E0 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				6EC5B7111FD7B7010096B0A6 /* ReaderViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		6E2054741FD99538009216E0 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				6E2054761FD99545009216E0 /* Datastore */,
+				6E2054751FD99540009216E0 /* Repository */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		6E2054751FD99540009216E0 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		6E2054761FD99545009216E0 /* Datastore */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Datastore;
+			sourceTree = "<group>";
+		};
 		6EC5B7031FD7B7010096B0A6 = {
 			isa = PBXGroup;
 			children = (
@@ -124,8 +163,9 @@
 		6EC5B70E1FD7B7010096B0A6 /* proj-2017-b */ = {
 			isa = PBXGroup;
 			children = (
+				6E2054741FD99538009216E0 /* Data */,
+				6E2054721FD99514009216E0 /* Presentation */,
 				6EC5B70F1FD7B7010096B0A6 /* AppDelegate.swift */,
-				6EC5B7111FD7B7010096B0A6 /* ReaderViewController.swift */,
 				6EC5B7131FD7B7010096B0A6 /* Main.storyboard */,
 				6EC5B7161FD7B7010096B0A6 /* Assets.xcassets */,
 				6EC5B7181FD7B7010096B0A6 /* LaunchScreen.storyboard */,
