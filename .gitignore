@@ -36,6 +36,7 @@ xcuserdata/
 
 ## Library
 Pods/
+R.generated.swift
 
 ## Mac
 .DS_Store
