@@ -41,3 +41,6 @@ R.generated.swift
 ## Mac
 .DS_Store
 
+## Kagaya
+Secret.swift
+

@@ -10,6 +10,6 @@ import Foundation
 import Alamofire
 
 class API {
-	let baseURL: URL = URL(string: "https://example.com")!
+	let baseURL: URL = URL(string: Secret.apiURL)!
 	let encoding: ParameterEncoding = URLEncoding.methodDependent
 }

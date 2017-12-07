@@ -19,6 +19,7 @@
 		6E20548F1FD9A250009216E0 /* QRDataSendRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E20548E1FD9A250009216E0 /* QRDataSendRequest.swift */; };
 		6E2054921FD9A414009216E0 /* QRDataEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E2054911FD9A414009216E0 /* QRDataEntity.swift */; };
 		6E2054941FD9A529009216E0 /* QRDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E2054931FD9A529009216E0 /* QRDataRepository.swift */; };
+		6E2054961FD9A931009216E0 /* Secret.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E2054951FD9A931009216E0 /* Secret.swift */; };
 		6EC5B7101FD7B7010096B0A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC5B70F1FD7B7010096B0A6 /* AppDelegate.swift */; };
 		6EC5B7121FD7B7010096B0A6 /* ReaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC5B7111FD7B7010096B0A6 /* ReaderViewController.swift */; };
 		6EC5B7151FD7B7010096B0A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EC5B7131FD7B7010096B0A6 /* Main.storyboard */; };
@@ -62,6 +63,7 @@
 		6E20548E1FD9A250009216E0 /* QRDataSendRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRDataSendRequest.swift; sourceTree = "<group>"; };
 		6E2054911FD9A414009216E0 /* QRDataEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRDataEntity.swift; sourceTree = "<group>"; };
 		6E2054931FD9A529009216E0 /* QRDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRDataRepository.swift; sourceTree = "<group>"; };
+		6E2054951FD9A931009216E0 /* Secret.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secret.swift; sourceTree = "<group>"; };
 		6EC5B70C1FD7B7010096B0A6 /* proj-2017-b.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "proj-2017-b.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EC5B70F1FD7B7010096B0A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6EC5B7111FD7B7010096B0A6 /* ReaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaderViewController.swift; sourceTree = "<group>"; };
@@ -212,7 +214,6 @@
 		6EC5B7031FD7B7010096B0A6 = {
 			isa = PBXGroup;
 			children = (
-				6E2054871FD99D52009216E0 /* R.generated.swift */,
 				6EC5B70E1FD7B7010096B0A6 /* proj-2017-b */,
 				6EC5B7231FD7B7010096B0A6 /* proj-2017-bTests */,
 				6EC5B72E1FD7B7010096B0A6 /* proj-2017-bUITests */,
@@ -238,11 +239,13 @@
 				6E2054901FD9A3DA009216E0 /* Entity */,
 				6E2054741FD99538009216E0 /* Data */,
 				6E2054721FD99514009216E0 /* Presentation */,
+				6E2054871FD99D52009216E0 /* R.generated.swift */,
 				6EC5B70F1FD7B7010096B0A6 /* AppDelegate.swift */,
 				6EC5B7131FD7B7010096B0A6 /* Main.storyboard */,
-				6EC5B7161FD7B7010096B0A6 /* Assets.xcassets */,
 				6EC5B7181FD7B7010096B0A6 /* LaunchScreen.storyboard */,
+				6EC5B7161FD7B7010096B0A6 /* Assets.xcassets */,
 				6EC5B71B1FD7B7010096B0A6 /* Info.plist */,
+				6E2054951FD9A931009216E0 /* Secret.swift */,
 			);
 			path = "proj-2017-b";
 			sourceTree = "<group>";
@@ -603,6 +606,7 @@
 				6EC5B7121FD7B7010096B0A6 /* ReaderViewController.swift in Sources */,
 				6E2054811FD99B38009216E0 /* ShowDataPresenter.swift in Sources */,
 				6E2054921FD9A414009216E0 /* QRDataEntity.swift in Sources */,
+				6E2054961FD9A931009216E0 /* Secret.swift in Sources */,
 				6EC5B7101FD7B7010096B0A6 /* AppDelegate.swift in Sources */,
 				6E20548A1FD99FD9009216E0 /* API.swift in Sources */,
 				6E20547E1FD99AF2009216E0 /* ReaderPresenter.swift in Sources */,
