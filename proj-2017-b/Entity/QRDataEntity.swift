@@ -10,19 +10,37 @@ import Foundation
 import Unbox
 
 class QRDataEntity: Unboxable {
-	var type: String?
+	var type: QRType
 	var id: String?
 	var name: String?
 	
 	required init(unboxer: Unboxer) throws {
-		type = unboxer.unbox(key: "type")
+		let t:String = try unboxer.unbox(key: "type")
+		type = QRType.init(rawValue: t)
 		id = unboxer.unbox(key: "id")
 		name = unboxer.unbox(key: "name")
 	}
 	
 	init(_ t:String, _ i: String, _ n: String) {
-		self.type = t
+		self.type = QRType.init(rawValue: t)
 		self.id = i
 		self.name = n
+	}
+}
+
+enum QRType: String {
+	case Place = "place"
+	case Parts = "parts"
+	case None
+	
+	init(rawValue: String) {
+		switch rawValue {
+		case QRType.Place.rawValue:
+			self = .Place
+		case QRType.Parts.rawValue:
+			self = .Parts
+		default:
+			self = .None
+		}
 	}
 }
