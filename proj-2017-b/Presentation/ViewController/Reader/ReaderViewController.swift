@@ -39,7 +39,11 @@ class ReaderViewController: UIViewController {
 
 	override func didReceiveMemoryWarning() {
 		super.didReceiveMemoryWarning()
-		// Dispose of any resources that can be recreated.
+	}
+	
+	@IBAction func rescanButtonTapped(_ sender: Any) {
+		readerVC.startScanning()
+		present(readerVC, animated: true, completion: nil)
 	}
 }
 

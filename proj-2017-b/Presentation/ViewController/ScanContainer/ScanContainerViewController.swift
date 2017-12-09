@@ -12,16 +12,17 @@ class ScanContainerViewController: UIViewController {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		// Do any additional setup after loading the view.
-		
-		let vc = R.storyboard.readerViewController.instantiateInitialViewController()!
-		vc.inject(ReaderPresenterImpl(vc))
-		displayContentController(content: vc)
+		manageChildViewController()
 	}
 	
 	override func didReceiveMemoryWarning() {
 		super.didReceiveMemoryWarning()
-		// Dispose of any resources that can be recreated.
+	}
+	
+	func manageChildViewController() {
+		let vc = R.storyboard.readerViewController.instantiateInitialViewController()!
+		vc.inject(ReaderPresenterImpl(vc))
+		displayContentController(content: vc)
 	}
 }
 
