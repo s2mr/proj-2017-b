@@ -21,7 +21,8 @@ class TopViewController: UIViewController {
 	}
 	
 	@IBAction func inputDataButtonTapped(_ sender: Any) {
-		let vc = ReaderViewController()
+		let vc = R.storyboard.readerViewController.instantiateInitialViewController()!
+		vc.inject(ReaderPresenterImpl(vc))
 		self.navigationController?.pushViewController(vc, animated: false)
 	}
 	

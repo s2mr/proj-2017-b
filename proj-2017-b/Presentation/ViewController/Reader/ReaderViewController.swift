@@ -22,6 +22,11 @@ class ReaderViewController: UIViewController {
 		}
 		return QRCodeReaderViewController(builder: builder)
 	}()
+	
+	var presenter: ReaderPresenter?
+	func inject(_ p: ReaderPresenter) {
+		self.presenter = p
+	}
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -41,20 +46,7 @@ class ReaderViewController: UIViewController {
 extension ReaderViewController: QRCodeReaderViewControllerDelegate {
 	// MARK: - QRCodeReaderViewController Delegate Methods
 	func reader(_ reader: QRCodeReaderViewController, didScanResult result: QRCodeReaderResult) {
-		
-		if let data = result.value.data(using: .utf8) {
-			var a: QRDataEntity?
-			do {
-				let unboxer = try Unboxer(data: data)
-				a = unboxer.unbox(key: "qr")
-			} catch (let e) {
-				print(e)
-			}
-			dump(a)
-		}
-		
-		reader.stopScanning()
-		dismiss(animated: true, completion: nil)
+		presenter?.didScan(res: result)
 	}
 	
 	func readerDidCancel(_ reader: QRCodeReaderViewController) {
