@@ -145,7 +145,6 @@
 			isa = PBXGroup;
 			children = (
 				6E20548D1FD9A049009216E0 /* Request */,
-				6E2054761FD99545009216E0 /* Datastore */,
 				6E2054751FD99540009216E0 /* Repository */,
 				6E2054891FD99FD9009216E0 /* API.swift */,
 				6E20548B1FD99FE5009216E0 /* KagayaAPI.swift */,
@@ -159,13 +158,6 @@
 				6E2054931FD9A529009216E0 /* QRDataRepository.swift */,
 			);
 			path = Repository;
-			sourceTree = "<group>";
-		};
-		6E2054761FD99545009216E0 /* Datastore */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Datastore;
 			sourceTree = "<group>";
 		};
 		6E2054771FD99AA9009216E0 /* Top */ = {

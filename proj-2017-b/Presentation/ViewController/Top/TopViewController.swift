@@ -13,7 +13,7 @@ class TopViewController: UIViewController {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		QRDataRepositoryImpl().sendQRData(QRDataEntity("type", "id", "name"))
+//		QRDataRepositoryImpl().sendQRData(QRDataEntity("type", "id", "name"))
 	}
 	
 	override func didReceiveMemoryWarning() {
