@@ -23,7 +23,7 @@ extension KagayaAPI.QRDataSendRequest: KagayaAPIRequest {
 	}
 	
 	var path: String {
-		return ""
+		return "qr"
 	}
 	
 	var parameters: Parameters? {

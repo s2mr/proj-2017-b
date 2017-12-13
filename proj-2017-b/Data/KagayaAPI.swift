@@ -18,9 +18,16 @@ class KagayaAPI: API {
 		
 		let req = Alamofire.request(url, method: request.method, parameters: request.parameters, encoding: encoding, headers: headers)
 		print(req.debugDescription)
-		req.responseJSON(completionHandler: { res in
-			dump(res)
+		req.responseString(completionHandler: { res in
+			print(res.result.value ?? "")
 		})
+//		req.responseJSON(completionHandler: { res in
+//			print(res.debugDescription)
+//
+////			dump(res)
+////			print(res.result)
+////			res
+//		})
 	}
 }
 

@@ -28,13 +28,11 @@ class ReaderPresenterImpl: ReaderPresenter {
 		}
 		
 		let data = res.value.data(using: .utf8)!
-		var qr: QRDataEntity?
 		let unboxer = try! Unboxer(data: data)
-		qr = unboxer.unbox(key: "qr")
-		
+		let qr: QRDataEntity? = unboxer.unbox(key: "qr")
 		dump(qr)
 		
-		guard let _ = qr else {
+		guard let unQr = qr else {
 			let ac = UIAlertController(title: "Error",
 									   message: "QRコードが不正です",
 									   preferredStyle: .alert)
@@ -44,7 +42,7 @@ class ReaderPresenterImpl: ReaderPresenter {
 			return
 		}
 		
-		switch qr!.type {
+		switch unQr.type {
 		case .Place:
 			print(".Place")
 			if willReadStatus == .Place {
@@ -65,12 +63,12 @@ class ReaderPresenterImpl: ReaderPresenter {
 			print("不正なQRコードです")
 		}
 		
-		//				let ac = UIAlertController(title: "QRCode",
-		//										   message: "id: \(qr?.id ?? "")\n\(qr?.type.rawValue ?? "")\n\(qr?.name ?? "")",
-		//					preferredStyle: .alert)
-		//				ac.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-		//				vc.dismiss(animated: true, completion: nil) // QRReaderを閉じる
-		//				vc.present(ac, animated: true, completion: nil)
+						let ac = UIAlertController(title: "QRCode",
+												   message: "id: \(qr?.id ?? "")\n\(qr?.type.rawValue ?? "")\n\(qr?.name ?? "")",
+							preferredStyle: .alert)
+						ac.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+						vc.dismiss(animated: true, completion: nil) // QRReaderを閉じる
+						vc.present(ac, animated: true, completion: nil)
 		
 		vc.readerVC.codeReader.stopScanning()
 		vc.dismiss(animated: true, completion: nil)
