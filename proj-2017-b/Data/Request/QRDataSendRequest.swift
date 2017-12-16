@@ -11,7 +11,8 @@ import Alamofire
 
 extension KagayaAPI {
 	struct QRDataSendRequest {
-		let data: QRDataEntity
+		let place: QRPlaceEntity
+		let parts: [QRPartsEntity]
 	}
 }
 
@@ -27,7 +28,8 @@ extension KagayaAPI.QRDataSendRequest: KagayaAPIRequest {
 	}
 	
 	var parameters: Parameters? {
-		return ["data":data]
+		return ["place": place,
+				"parts": parts]
 	}
 }
 

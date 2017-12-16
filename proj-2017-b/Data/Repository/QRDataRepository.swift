@@ -9,13 +9,13 @@
 import Foundation
 
 protocol QRDataRepository {
-	func sendQRData(_ e: QRDataEntity)
+	func sendQRData(_ place: QRPlaceEntity, parts: [QRPartsEntity])
 }
 
 class QRDataRepositoryImpl: QRDataRepository {
 	let api = KagayaAPI()
 	
-	func sendQRData(_ e: QRDataEntity) {
-		api.send(request: KagayaAPI.QRDataSendRequest(data: e))
+	func sendQRData(_ place: QRPlaceEntity, parts: [QRPartsEntity]) {
+		api.send(request: KagayaAPI.QRDataSendRequest(place: place, parts: parts))
 	}
 }
