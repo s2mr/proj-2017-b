@@ -28,8 +28,17 @@ extension KagayaAPI.QRDataSendRequest: KagayaAPIRequest {
 	}
 	
 	var parameters: Parameters? {
-		return ["place": place,
-				"parts": parts]
+		var arr: [Any] = []
+		for p in parts {
+			var dic:[String: Any] = [:]
+			dic["id"] = p.id
+			dic["name"] = p.name
+			arr.append(dic)
+		}
+		
+		return ["place": ["id": place.id,
+						  "name": place.name],
+				"parts": arr]
 	}
 }
 

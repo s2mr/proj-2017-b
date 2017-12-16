@@ -11,5 +11,5 @@ import Alamofire
 
 class API {
 	let baseURL: URL = URL(string: Secret.apiURL)!
-	let encoding: ParameterEncoding = URLEncoding.methodDependent
+	let encoding: ParameterEncoding = JSONEncoding.default
 }
