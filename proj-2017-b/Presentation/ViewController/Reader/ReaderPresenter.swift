@@ -18,6 +18,14 @@ class ReaderPresenterImpl: ReaderPresenter {
 	let vc: ReaderViewController
 	var willReadStatus = QRType.Place
 	
+	var place: QRPlaceEntity?
+	{
+		willSet {
+			sendQRDataIfPrepared()
+		}
+	}
+	var parts: [QRPartsEntity] = []
+	
 	init(_ vc: ReaderViewController) {
 		self.vc = vc
 	}
@@ -51,6 +59,7 @@ class ReaderPresenterImpl: ReaderPresenter {
 		switch unQr {
 		case is QRPlaceEntity:
 			print(".Place")
+			place = unQr as? QRPlaceEntity
 			if willReadStatus == .Place {
 				willReadStatus = .Parts
 				print("部品の読み取りに移行")
@@ -58,6 +67,7 @@ class ReaderPresenterImpl: ReaderPresenter {
 				print("場所の読み取り\n部品の読み取りへ")
 			}
 		case is QRPartsEntity:
+			parts.append(unQr as! QRPartsEntity)
 			print(".Parts")
 			if willReadStatus == .Parts {
 				print("部品の読み取りを継続")
@@ -69,14 +79,27 @@ class ReaderPresenterImpl: ReaderPresenter {
 			print("不正なQRコードです")
 		}
 		
-						let ac = UIAlertController(title: "QRCode",
-												   message: "id: \(qr?.id ?? "")\n\(qr?.name ?? "")",
-							preferredStyle: .alert)
-						ac.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-						vc.dismiss(animated: true, completion: nil) // QRReaderを閉じる
-						vc.present(ac, animated: true, completion: nil)
+		let ac = UIAlertController(title: "\(type(of: unQr))",
+								   message: "id: \(qr?.id ?? "")\n\(qr?.name ?? "")",
+			preferredStyle: .alert)
+		ac.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+		vc.dismiss(animated: true, completion: nil) // QRReaderを閉じる
+		vc.present(ac, animated: true, completion: nil)
 		
 		vc.readerVC.codeReader.stopScanning()
 		vc.dismiss(animated: true, completion: nil)
+	}
+	
+	func finishButtonTapped() {
+		sendQRDataIfPrepared()
+	}
+	
+	func sendQRDataIfPrepared() {
+		if parts.count > 0 {
+			if let place = place {
+				QRDataRepositoryImpl().sendQRData(place, parts: parts)
+			}
+			parts = []
+		}
 	}
 }
