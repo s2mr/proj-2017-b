@@ -80,7 +80,7 @@ class ReaderPresenterImpl: ReaderPresenter {
 		}
 		
 		let ac = UIAlertController(title: "\(type(of: unQr))",
-								   message: "id: \(qr?.id ?? "")\n\(qr?.name ?? "")",
+								   message: "id: \(qr?.id ?? -1)\n\(qr?.name ?? "")",
 			preferredStyle: .alert)
 		ac.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
 		vc.dismiss(animated: true, completion: nil) // QRReaderを閉じる

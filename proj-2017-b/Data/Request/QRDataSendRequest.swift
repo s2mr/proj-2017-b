@@ -36,8 +36,8 @@ extension KagayaAPI.QRDataSendRequest: KagayaAPIRequest {
 			arr.append(dic)
 		}
 		
-		return ["place": ["id": place.id,
-						  "name": place.name],
+		return ["place": ["id": place.id!,
+						  "name": place.name!],
 				"parts": arr]
 	}
 }

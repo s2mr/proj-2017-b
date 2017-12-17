@@ -10,7 +10,7 @@ import Foundation
 import Unbox
 
 class QRPlaceEntity: Unboxable, KagayaQREntity {
-	var id: String?
+	var id: Int?
 	var name: String?
 	
 	required init(unboxer: Unboxer) throws {
@@ -18,7 +18,7 @@ class QRPlaceEntity: Unboxable, KagayaQREntity {
 		name = unboxer.unbox(key: "name")
 	}
 	
-	init(_ i: String, _ n: String) {
+	init(_ i: Int, _ n: String) {
 		self.id = i
 		self.name = n
 	}

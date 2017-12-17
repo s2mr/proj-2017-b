@@ -9,6 +9,6 @@
 import Foundation
 
 protocol KagayaQREntity {
-	var id: String? { get }
+	var id: Int? { get }
 	var name: String? { get }
 }

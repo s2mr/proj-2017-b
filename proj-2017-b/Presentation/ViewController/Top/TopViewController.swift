@@ -13,10 +13,10 @@ class TopViewController: UIViewController {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		QRDataRepositoryImpl().sendQRData(QRPlaceEntity.init("id", "place_name"),
+		QRDataRepositoryImpl().sendQRData(QRPlaceEntity.init(1, "place_name"),
 										  parts: [
-											QRPartsEntity.init("id", "parts1"),
-											QRPartsEntity.init("id", "parts2")
+											QRPartsEntity.init(1, "parts1"),
+											QRPartsEntity.init(2, "parts2")
 			])
 	}
 	
